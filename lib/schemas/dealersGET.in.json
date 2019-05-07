@@ -1,0 +1,87 @@
+{
+    "type": "object",
+    "properties": {
+        "dealerIds": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "latitude": {
+            "required": false,
+            "type": "number"
+        },
+        "longitude": {
+            "required": false,
+            "type": "number"
+        },
+        "radiusValue": {
+            "required": false,
+            "type": "integer",
+            "default": 10
+        },
+        "radiusUnit": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "M",
+                "KM",
+                "MILE"
+            ],
+            "default": "KM"
+        },
+        "countryIsoCode": {
+            "required": false,
+            "type": "string"
+        },
+        "city": {
+            "required": false,
+            "type": "string"
+        },
+        "name": {
+            "required": false,
+            "type": "string"
+        },
+        "brand": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "MB",
+                "SMT"
+            ]
+        },
+        "productGroup": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "PASSENGER-CAR",
+                "VAN"
+            ]
+        },
+        "activity": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "PARTS",
+                "SALES",
+                "SERVICE",
+                "USED-VEHICLES-TRADE"
+            ]
+        },
+        "fields": {
+            "required": false,
+            "type": "string"
+        },
+        "page": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        },
+        "pageSize": {
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

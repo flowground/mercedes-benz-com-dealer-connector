@@ -1,0 +1,133 @@
+{
+    "title": "Dealer",
+    "description": "The Dealer API provides Dealer search functions.",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/mercedes-benz.com/dealer/1.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.mercedes-benz.com/dealer_tryout/v1",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "countriesGET": {
+            "main": "./lib/actions/countriesGET.js",
+            "title": "This request returns the countries supported by the Dealer API",
+            "description": "This request returns the countries supported by the Dealer API",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/countriesGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "x_swagger_router_controller_countries": {
+            "main": "./lib/actions/x_swagger_router_controller_countries.js",
+            "title": "x_swagger_router_controller_countries",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/x_swagger_router_controller_countries.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "dealersGET": {
+            "main": "./lib/actions/dealersGET.js",
+            "title": "This request returns dealers (dealer, garage, retailer, etc.) for given parameters",
+            "description": "This request returns dealers (dealer, garage, retailer, etc.) for given parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/dealersGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "x_swagger_router_controller_dealers": {
+            "main": "./lib/actions/x_swagger_router_controller_dealers.js",
+            "title": "x_swagger_router_controller_dealers",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/x_swagger_router_controller_dealers.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "dealerGET": {
+            "main": "./lib/actions/dealerGET.js",
+            "title": "This request returns dealers for given parameters",
+            "description": "This request returns dealers for given parameters",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/dealerGET.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "x_swagger_router_controller_dealers__dealerId_": {
+            "main": "./lib/actions/x_swagger_router_controller_dealers__dealerId_.js",
+            "title": "x_swagger_router_controller_dealers__dealerId_",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/x_swagger_router_controller_dealers__dealerId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

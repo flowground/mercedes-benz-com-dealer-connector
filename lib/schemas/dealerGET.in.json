@@ -1,0 +1,14 @@
+{
+    "type": "object",
+    "properties": {
+        "dealerId": {
+            "required": true,
+            "type": "string",
+            "default": "GS0000275"
+        },
+        "fields": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
